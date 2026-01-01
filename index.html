@@ -1,0 +1,37 @@
+<!--edu_12_1_1.html -->
+<html>
+ <head>
+  <title>javaScript基础</title>
+  <script type="text/javascript">
+alert("调用head中定义的JavaScript函数！");
+  </script>
+  <script type="text/javascript">
+function jisuan(m){
+var a=Number(m);
+var b=Math.floor(a/100);
+var c=Math.floor((a-b*100)/10);
+var d=Math.floor(a-b*100-c*10);
+if(b*b*b+c*c*c+d*d*d==a)
+ alert("这是水仙花数");
+else
+ alert("这不是水仙花数");
+}
+</script>
+  <script type="text/javascript">
+  function message(){
+	alert("调用head中定义的JavaScript函数！");
+}
+  </script>
+  <script type="text/javascript" src="demo.js"></script>
+ </head>
+ <body>
+  <script type="text/javascript">
+   document.write("这是第一个JavaScript实例!");
+  </script>
+  <form><input name="btnCallJS" type="button" onclick="message();" value="事件调用自定义函数"></form>
+  <form><input name="btnCallJS" type="button" onclick="MESSAGE();" value="自定义函数"></form>
+  <form>
+  <input type="text" id="numInput" placeholder="例如：153"> 
+  <input name="btnCallJ" type="button" onclick="jisuan(document.getElementById('numInput').value);" value="判断水仙花数"></form>
+ </body>
+</html>
